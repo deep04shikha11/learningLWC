@@ -1,0 +1,21 @@
+<apex:page standardStylesheets="false" showHeader="false" controller="RetrieveContacts" renderAs="pdf">
+<!-- Begin Default Content REMOVE THIS -->
+<div style="background:url('{!$Resource.watermarkdraft}')  no-repeat center center; height:800px;font-family: Arial, Helvetica, sans-serif;">
+<h1>My Contacts</h1>
+<table style="border-collapse: collapse; width: 100%;">
+    <tr style="padding:8px; text-align:left; border-bottom: 1px solid #ddd;">
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Contact</th>
+    </tr>
+    <apex:repeat value="{!contactList}" var="contactObj">
+        <tr style="padding:8px; text-align:left; border-bottom: 1px solid #ddd;">
+            <td style="padding:8px; text-align:left; border-bottom: 1px solid #ddd;">{!contactObj.FirstName}</td>
+            <td style="padding:8px; text-align:left; border-bottom: 1px solid #ddd;">{!contactObj.LastName}</td>
+            <td style="padding:8px; text-align:left; border-bottom: 1px solid #ddd;">{!contactObj.Phone}</td>
+        </tr>
+    </apex:repeat>
+</table>
+<!-- End Default Content REMOVE THIS -->
+</div>
+</apex:page>
